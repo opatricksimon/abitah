@@ -323,12 +323,11 @@
     <!-- ============================================
      VIVA O LIFESTYLE - VÍDEO FULLWIDTH
      ============================================ -->
-<section class="lifestyle-video" id="lifestyle-video" aria-labelledby="lifestyle-video-title">
-    <div class="lifestyle-video-bg">
+<div class="lifestyle-video-bg">
     <iframe 
-        src="https://player.vimeo.com/video/685926423?autoplay=1&muted=1&loop=1&byline=0&title=0"
+        src="https://player.vimeo.com/video/1146922992?badge=0&autopause=0&autoplay=1&muted=1&loop=1&byline=0&title=0"
         frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture; encrypted-media; web-share"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
     ></iframe>
@@ -3984,8 +3983,13 @@ ul {
     }
     
     .hero-badges {
-        flex-direction: column;
-        align-items: center;
+         display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 48px; /* antes era 32px */
+    opacity: 0;
+    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
     }
     
     .testimonial-card {
