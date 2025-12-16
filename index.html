@@ -208,8 +208,12 @@
                 Treino que vira <span>estilo de vida.</span>
             </h1>
             <p class="hero-subtitle">
-                Cross Training • Calistenia • Circo • Yoga • Emagrecimento
-            </p>
+    <span class="hero-tag">Cross Training</span>
+    <span class="hero-tag">Calistenia</span>
+    <span class="hero-tag">Circo</span>
+    <span class="hero-tag">Yoga</span>
+    <span class="hero-tag">Emagrecimento</span>
+</p>
 
             <!-- Badges de Parceiros -->
             <div class="hero-badges">
@@ -321,16 +325,15 @@
      ============================================ -->
 <section class="lifestyle-video" id="lifestyle-video" aria-labelledby="lifestyle-video-title">
     <div class="lifestyle-video-bg">
-        <!-- Vídeo de fundo do Vimeo -->
-        <iframe 
-            src="https://player.vimeo.com/video/685926423?background=1&autoplay=1&loop=1&muted=1&byline=0&title=0"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-        ></iframe>
-        <div class="lifestyle-video-overlay"></div>
-    </div>
+    <iframe 
+        src="https://player.vimeo.com/video/685926423?autoplay=1&muted=1&loop=1&byline=0&title=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+    ></iframe>
+    <div class="lifestyle-video-overlay"></div>
+</div>
     
     <div class="lifestyle-video-content">
         <h2 class="lifestyle-video-title" id="lifestyle-video-title">
@@ -1998,23 +2001,38 @@ ul {
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-    color: var(--text-light-gray);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
     margin-bottom: 24px;
-    font-weight: 400;
     opacity: 0;
     animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
 }
 
+.hero-tag {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    font-weight: 500;
+    color: var(--text-light-gray);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 0, 0, 0.55); /* fundo escuro translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+}
 /* Hero Badges (Gympass/TotalPass) */
-.hero-badges {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 32px;
-    opacity: 0;
-    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.65); /* mais escuro */
+    backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-white);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .hero-badge {
