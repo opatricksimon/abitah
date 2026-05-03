@@ -22,16 +22,9 @@
     <meta property="og:locale" content="pt_BR">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/abitah-logo-192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/abitah-favicon-32.png">
     <link rel="apple-touch-icon" href="assets/images/abitah-logo-192.png">
     <link rel="preload" as="image" href="assets/images/hero-abitah-poster-960.webp" fetchpriority="high">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;700;800;900&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
     
     <style>
         /* ============================================
@@ -53,7 +46,7 @@
             --text-gray: #888888;
             --text-light-gray: #CCCCCC;
             --gradient-primary: linear-gradient(135deg, var(--primary-orange), var(--primary-yellow));
-            --font-main: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-main: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             --section-padding: clamp(80px, 12vw, 150px);
             --container-max: 1400px;
             --container-padding: clamp(20px, 5vw, 60px);
@@ -1907,8 +1900,8 @@
             --text-gray: #aeb6a7;
             --text-light-gray: #dfe6d8;
             --gradient-primary: linear-gradient(135deg, #6f845f, #dce8bd);
-            --font-main: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-display: 'Archivo Black', 'Montserrat', sans-serif;
+            --font-main: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-display: 'Archivo Black', Impact, 'Arial Black', system-ui, sans-serif;
             --whatsapp-green: #25d366;
         }
 
@@ -3243,6 +3236,14 @@
     <script>
         const heroVideo = document.getElementById('heroVideo');
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const desktopViewport = window.matchMedia('(min-width: 900px)');
+
+        if (desktopViewport.matches) {
+            const fontStylesheet = document.createElement('link');
+            fontStylesheet.rel = 'stylesheet';
+            fontStylesheet.href = 'https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;700;800;900&display=swap';
+            document.head.appendChild(fontStylesheet);
+        }
 
         function loadVideoSource(video) {
             if (!video || video.dataset.loaded === 'true') return;
@@ -3256,7 +3257,7 @@
             video.load();
         }
 
-        const canLoadHeroVideo = window.matchMedia('(min-width: 900px)').matches
+        const canLoadHeroVideo = desktopViewport.matches
             && !reduceMotion.matches
             && !(navigator.connection && navigator.connection.saveData);
 
