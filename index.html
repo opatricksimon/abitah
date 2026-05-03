@@ -18,17 +18,20 @@
     <meta property="og:url" content="https://opatricksimon.github.io/abitah/">
     <meta property="og:title" content="Abitah | Treine junto, crie comunidade e construa história">
     <meta property="og:description" content="A essência Abitah: treinar junto, criar comunidade e construir história todos os dias.">
-    <meta property="og:image" content="assets/images/abitah-community.jpg">
+    <meta property="og:image" content="assets/images/abitah-community-720.webp">
     <meta property="og:locale" content="pt_BR">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/abitah-logo-transparent.png">
-    <link rel="apple-touch-icon" href="assets/images/abitah-logo-transparent.png">
+    <link rel="icon" type="image/png" href="assets/images/abitah-logo-192.png">
+    <link rel="apple-touch-icon" href="assets/images/abitah-logo-192.png">
+    <link rel="preload" as="image" href="assets/images/hero-abitah-poster-960.webp" fetchpriority="high">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
     
     <style>
         /* ============================================
@@ -307,6 +310,9 @@
             position: absolute;
             inset: 0;
             z-index: -2;
+            background-image: url('assets/images/hero-abitah-poster-960.webp');
+            background-size: cover;
+            background-position: center bottom;
         }
 
         .hero-bg img,
@@ -321,6 +327,11 @@
         .hero-bg video {
             min-width: 100%;
             min-height: 100%;
+        }
+
+        section:not(.hero) {
+            content-visibility: auto;
+            contain-intrinsic-size: 900px;
         }
 
         @keyframes heroZoom {
@@ -2828,7 +2839,7 @@
     <header class="header" id="header">
         <div class="container header-container">
             <a href="#hero" class="logo" aria-label="Abitah">
-                <img src="assets/images/abitah-logo-transparent.png" alt="Abitah" width="50" height="50">
+                <img src="assets/images/abitah-logo-mark.webp" alt="Abitah" width="50" height="50" decoding="async">
             </a>
             
             <!-- Menu de Navegação -->
@@ -2879,14 +2890,12 @@
          ============================================ -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-abitah-poster.jpg" aria-label="Vídeo de apresentação da Abitah">
-                <source src="assets/video/ctabitah.mp4" type="video/mp4">
-            </video>
+            <video id="heroVideo" muted loop playsinline preload="none" poster="assets/images/hero-abitah-poster-960.webp" data-src="assets/video/ctabitah-hero-loop.mp4" aria-label="Vídeo de apresentação da Abitah"></video>
         </div>
         <div class="hero-overlay"></div>
         
         <div class="hero-content">
-            <img class="hero-logo-mark" src="assets/images/abitah-logo-transparent.png" alt="" aria-hidden="true">
+            <img class="hero-logo-mark" src="assets/images/abitah-logo-mark.webp" alt="" aria-hidden="true" width="192" height="192" decoding="async">
             <div class="eyebrow">Abitah Bahia</div>
             <h1>Treine junto. <span>Construa história.</span></h1>
             <p class="hero-copy">Uma comunidade feita para quem quer se movimentar, evoluir e viver o treino com presença, energia e pertencimento.</p>
@@ -2939,7 +2948,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-image reveal">
-                    <img src="assets/images/abitah-community.jpg" alt="Comunidade Abitah reunida" width="1100" height="1400" loading="lazy">
+                    <img src="assets/images/abitah-community-720.webp" alt="Comunidade Abitah reunida" width="720" height="900" loading="lazy" decoding="async">
                     <div class="about-stats">
                         <h4>3 anos</h4>
                         <p>Treinando junto e criando comunidade</p>
@@ -3014,7 +3023,7 @@
             <div class="programs-grid reveal-stagger">
                 <article class="program-card">
                     <div class="program-badge prize">Base Abitah</div>
-                    <div class="program-image"><img src="assets/images/program-funcional.webp" alt="Programa funcional Abitah" loading="lazy"></div>
+                    <div class="program-image"><img src="assets/images/program-funcional-640.webp" alt="Programa funcional Abitah" width="640" height="640" loading="lazy" decoding="async"></div>
                     <div class="program-content">
                         <div class="program-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div>
                         <h3>Funcional</h3>
@@ -3023,7 +3032,7 @@
                 </article>
                 <article class="program-card">
                     <div class="program-badge favorite">Alta intensidade</div>
-                    <div class="program-image"><img src="assets/images/program-performance.webp" alt="Programa performance Abitah" loading="lazy"></div>
+                    <div class="program-image"><img src="assets/images/program-performance-640.webp" alt="Programa performance Abitah" width="640" height="640" loading="lazy" decoding="async"></div>
                     <div class="program-content">
                         <div class="program-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
                         <h3>Performance</h3>
@@ -3032,7 +3041,7 @@
                 </article>
                 <article class="program-card">
                     <div class="program-badge">Cardio coletivo</div>
-                    <div class="program-image"><img src="assets/images/program-spinning.webp" alt="Programa spinning Abitah" loading="lazy"></div>
+                    <div class="program-image"><img src="assets/images/program-spinning-640.webp" alt="Programa spinning Abitah" width="640" height="640" loading="lazy" decoding="async"></div>
                     <div class="program-content">
                         <div class="program-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="3"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="8" y1="21" x2="12" y2="16"></line><line x1="16" y1="21" x2="12" y2="16"></line></svg></div>
                         <h3>Spinning</h3>
@@ -3041,7 +3050,7 @@
                 </article>
                 <article class="program-card">
                     <div class="program-badge">Comunidade na rua</div>
-                    <div class="program-image"><img src="assets/images/program-clube-corrida.webp" alt="Clube de corrida Abitah" loading="lazy"></div>
+                    <div class="program-image"><img src="assets/images/program-clube-corrida-640.webp" alt="Clube de corrida Abitah" width="640" height="640" loading="lazy" decoding="async"></div>
                     <div class="program-content">
                         <div class="program-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg></div>
                         <h3>Clube de Corrida</h3>
@@ -3065,17 +3074,17 @@
             <p class="section-subtitle reveal">Sinta a energia da casa em movimento.</p>
             <div class="daily-videos reveal-stagger" aria-label="Vídeos do dia a dia Abitah">
                 <article class="daily-video">
-                    <video preload="metadata" playsinline poster="assets/images/daily-daviipicanco-poster.jpg"><source src="assets/video/daviipicanco.mp4" type="video/mp4"></video>
+                    <video preload="none" playsinline poster="assets/images/daily-daviipicanco-poster-360.webp" data-src="assets/video/daviipicanco-540.mp4"></video>
                     <button class="video-play" type="button" aria-label="Reproduzir vídeo do treino Abitah"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button>
                     <div class="daily-video-caption"><span>Treino</span><span>01</span></div>
                 </article>
                 <article class="daily-video">
-                    <video preload="metadata" playsinline poster="assets/images/daily-daviipicanco-1-poster.jpg"><source src="assets/video/daviipicanco-1.mp4" type="video/mp4"></video>
+                    <video preload="none" playsinline poster="assets/images/daily-daviipicanco-1-poster-360.webp" data-src="assets/video/daviipicanco-1-540.mp4"></video>
                     <button class="video-play" type="button" aria-label="Reproduzir vídeo da comunidade Abitah"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button>
                     <div class="daily-video-caption"><span>Comunidade</span><span>02</span></div>
                 </article>
                 <article class="daily-video">
-                    <video preload="metadata" playsinline poster="assets/images/daily-ctabitah-poster.jpg"><source src="assets/video/ctabitah-social.mp4" type="video/mp4"></video>
+                    <video preload="none" playsinline poster="assets/images/daily-ctabitah-poster-360.webp" data-src="assets/video/ctabitah-social-540.mp4"></video>
                     <button class="video-play" type="button" aria-label="Reproduzir vídeo da experiência Abitah"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button>
                     <div class="daily-video-caption"><span>Experiência</span><span>03</span></div>
                 </article>
@@ -3150,7 +3159,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo"><img src="assets/images/abitah-logo-transparent.png" alt="Abitah" width="45" height="45"><span>Abitah</span></div>
+                <div class="footer-logo"><img src="assets/images/abitah-logo-mark.webp" alt="Abitah" width="45" height="45" loading="lazy" decoding="async"><span>Abitah</span></div>
                 <div class="footer-social">
                     <a href="https://instagram.com/abitah" target="_blank" aria-label="Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -3209,9 +3218,35 @@
     <script>
         const heroVideo = document.getElementById('heroVideo');
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        if (heroVideo && reduceMotion.matches) {
-            heroVideo.pause();
-            heroVideo.removeAttribute('autoplay');
+
+        function loadVideoSource(video) {
+            if (!video || video.dataset.loaded === 'true') return;
+            const src = video.dataset.src;
+            if (!src) return;
+            const source = document.createElement('source');
+            source.src = src;
+            source.type = 'video/mp4';
+            video.appendChild(source);
+            video.dataset.loaded = 'true';
+            video.load();
+        }
+
+        const canLoadHeroVideo = window.matchMedia('(min-width: 900px)').matches
+            && !reduceMotion.matches
+            && !(navigator.connection && navigator.connection.saveData);
+
+        if (heroVideo && canLoadHeroVideo) {
+            const startHeroVideo = () => {
+                loadVideoSource(heroVideo);
+                heroVideo.play().catch(() => {});
+            };
+            window.addEventListener('load', () => {
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(startHeroVideo, { timeout: 1800 });
+                } else {
+                    setTimeout(startHeroVideo, 1200);
+                }
+            }, { once: true });
         }
 
         const themeToggle = document.getElementById('themeToggle');
@@ -3273,6 +3308,7 @@
                     video.pause();
                     card.classList.remove('is-playing');
                 } else {
+                    loadVideoSource(video);
                     video.play();
                     card.classList.add('is-playing');
                 }
