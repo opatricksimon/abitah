@@ -24,7 +24,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/abitah-favicon-32.png">
     <link rel="apple-touch-icon" href="assets/images/abitah-logo-192.png">
-    <link rel="preload" as="image" href="assets/images/hero-abitah-poster-960.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/abitah-logo-mark-64.webp" fetchpriority="high">
     
     <style>
         /* ============================================
@@ -2857,7 +2857,7 @@
     <header class="header" id="header">
         <div class="container header-container">
             <a href="#hero" class="logo" aria-label="Abitah">
-                <img src="assets/images/abitah-logo-mark.webp" alt="Abitah" width="50" height="50" decoding="async">
+                <img src="assets/images/abitah-logo-mark-64.webp" alt="Abitah" width="50" height="50" decoding="async">
             </a>
             
             <!-- Menu de Navegação -->
@@ -2913,7 +2913,7 @@
         <div class="hero-overlay"></div>
         
         <div class="hero-content">
-            <img class="hero-logo-mark" src="assets/images/abitah-logo-mark.webp" alt="" aria-hidden="true" width="192" height="192" decoding="async">
+            <img class="hero-logo-mark" src="assets/images/abitah-logo-mark-64.webp" alt="" aria-hidden="true" width="64" height="64" decoding="async" fetchpriority="high">
             <div class="eyebrow">Abitah Bahia</div>
             <h1>Treine junto. <span>Construa história.</span></h1>
             <p class="hero-copy">Uma comunidade feita para quem quer se movimentar, evoluir e viver o treino com presença, energia e pertencimento.</p>
@@ -2966,7 +2966,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-image reveal">
-                    <img src="assets/images/abitah-community-700.webp" alt="Comunidade Abitah reunida" width="700" height="526" loading="lazy" decoding="async">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='526'%3E%3C/svg%3E" data-image-src="assets/images/abitah-community-700.webp" alt="Comunidade Abitah reunida" width="700" height="526" loading="lazy" decoding="async">
                     <div class="about-stats">
                         <h4>3 anos</h4>
                         <p>Treinando junto e criando comunidade</p>
@@ -3092,17 +3092,17 @@
             <p class="section-subtitle reveal">Sinta a energia da casa em movimento.</p>
             <div class="daily-videos reveal-stagger" aria-label="Vídeos do dia a dia Abitah">
                 <article class="daily-video">
-                    <video preload="none" playsinline poster="assets/images/daily-daviipicanco-poster-360.webp" data-src="assets/video/daviipicanco-540.mp4"></video>
+                    <video preload="none" playsinline data-poster="assets/images/daily-daviipicanco-poster-360.webp" data-src="assets/video/daviipicanco-540.mp4"></video>
                     <button class="video-play" type="button" aria-label="Reproduzir vídeo do treino Abitah"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button>
                     <div class="daily-video-caption"><span>Treino</span><span>01</span></div>
                 </article>
                 <article class="daily-video">
-                    <video preload="none" playsinline poster="assets/images/daily-daviipicanco-1-poster-360.webp" data-src="assets/video/daviipicanco-1-540.mp4"></video>
+                    <video preload="none" playsinline data-poster="assets/images/daily-daviipicanco-1-poster-360.webp" data-src="assets/video/daviipicanco-1-540.mp4"></video>
                     <button class="video-play" type="button" aria-label="Reproduzir vídeo da comunidade Abitah"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button>
                     <div class="daily-video-caption"><span>Comunidade</span><span>02</span></div>
                 </article>
                 <article class="daily-video">
-                    <video preload="none" playsinline poster="assets/images/daily-ctabitah-poster-360.webp" data-src="assets/video/ctabitah-social-540.mp4"></video>
+                    <video preload="none" playsinline data-poster="assets/images/daily-ctabitah-poster-360.webp" data-src="assets/video/ctabitah-social-540.mp4"></video>
                     <button class="video-play" type="button" aria-label="Reproduzir vídeo da experiência Abitah"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button>
                     <div class="daily-video-caption"><span>Experiência</span><span>03</span></div>
                 </article>
@@ -3177,7 +3177,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo"><img src="assets/images/abitah-logo-mark.webp" alt="Abitah" width="45" height="45" loading="lazy" decoding="async"><span>Abitah</span></div>
+                <div class="footer-logo"><img src="assets/images/abitah-logo-mark-64.webp" alt="Abitah" width="45" height="45" loading="lazy" decoding="async"><span>Abitah</span></div>
                 <div class="footer-social">
                     <a href="https://instagram.com/abitah" target="_blank" aria-label="Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -3327,6 +3327,31 @@
             };
             window.addEventListener('scroll', revealOnScroll, { passive: true });
             window.addEventListener('load', revealOnScroll, { once: true });
+        }
+
+        const lazyMedia = document.querySelectorAll('[data-image-src], video[data-poster]');
+        const loadLazyMedia = element => {
+            if (element.dataset.imageSrc) {
+                element.src = element.dataset.imageSrc;
+                delete element.dataset.imageSrc;
+            }
+            if (element.dataset.poster) {
+                element.poster = element.dataset.poster;
+                delete element.dataset.poster;
+            }
+        };
+
+        if ('IntersectionObserver' in window) {
+            const mediaObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    loadLazyMedia(entry.target);
+                    mediaObserver.unobserve(entry.target);
+                });
+            }, { rootMargin: '0px', threshold: 0.01 });
+            lazyMedia.forEach(element => mediaObserver.observe(element));
+        } else {
+            lazyMedia.forEach(loadLazyMedia);
         }
 
         document.querySelectorAll('.faq-item').forEach(item => {
